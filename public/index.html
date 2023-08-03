@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yugi</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="jquery.min.js"></script>
+  <script src="main.js"></script>
+</head>
+<body>
+  <h1>Registro de Cartas de Yu-Gi-Oh!</h1>
+  <form id="cardForm">
+    <label for="cardType">Tipo de carta:</label>
+    <select name="cardType" id="cardType">
+      <option value="monstruo">Monstruo</option>
+      <option value="magica">Mágica</option>
+      <option value="trampa">Trampa</option>
+    </select>
+    <br>
+
+    <label for="cardName">Nombre:</label>
+    <input type="text" name="cardName" id="cardName" required>
+    <br>
+
+    <label for="cardDescription">Descripción:</label>
+    <textarea name="cardDescription" id="cardDescription" required></textarea>
+    <br>
+
+    <label for="battlePoints">Puntos de Batalla:</label>
+    <input type="number" name="battlePoints" id="battlePoints" required>
+    <br>
+
+    <input type="submit" value="Registrar Carta">
+  </form>
+
+  <label for="searchTerm">Buscar cartas por nombre o tipo:</label>
+  <input type="text" id="searchTerm">
+  <button id="searchButton">Buscar</button>
+
+  <button id="loadCards">Cargar Cartas</button>
+  <!-- Elemento para seleccionar el atributo para ordenar -->
+<select id="sortBy">
+  <option value="cardName">Nombre</option>
+  <option value="battlePoints">Puntos de Batalla</option>
+  <!-- Agrega otros atributos si lo deseas -->
+</select>
+
+<!-- Elemento para seleccionar el orden de clasificación (ascendente o descendente) -->
+<select id="sortOrder">
+  <option value="asc">Ascendente</option>
+  <option value="desc">Descendente</option>
+</select>
+
+<!-- Elemento para filtrar por tipo de carta -->
+<input type="text" id="filterByCardType" placeholder="Filtrar por Tipo de Carta">
+<!-- Agrega otros elementos para filtrar por otros atributos si lo deseas -->
+
+  <div class="card-container">
+  <table id="cardTable">
+    <tbody></tbody>
+  </table>
+ </div>
+
+  <div id="message"></div>
+
+  <div id="updateCardForm" class="popup">
+    <h2>Actualizar Carta</h2>
+    <form id="updateForm">
+      <label for="updateCardType">Tipo de carta:</label>
+      <select name="updateCardType" id="updateCardType">
+        <option value="monstruo">Monstruo</option>
+        <option value="magica">Mágica</option>
+        <option value="trampa">Trampa</option>
+      </select>
+      <br>
+  
+      <label for="updateCardName">Nombre:</label>
+      <input type="text" name="updateCardName" id="updateCardName" required>
+      <br>
+  
+      <label for="updateCardDescription">Descripción:</label>
+      <textarea name="updateCardDescription" id="updateCardDescription" required></textarea>
+      <br>
+  
+      <label for="updateBattlePoints">Puntos de Batalla:</label>
+      <input type="number" name="updateBattlePoints" id="updateBattlePoints" required>
+      <br>
+  
+      <input type="submit" value="Actualizar Carta">
+    </form>
+    <button id="closeUpdateForm">Cerrar</button>
+  </div>
+  <div id="pagination">
+    <button id="prevPage">Anterior</button>
+    <span id="currentPage">1</span> de <span id="totalPages">1</span>
+    <button id="nextPage">Siguiente</button>
+  </div>
+
+</body>
+</html>

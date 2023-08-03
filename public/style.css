@@ -1,0 +1,186 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+
+h1 {
+  text-align: center;
+}
+
+
+form {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"],
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px; 
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px; 
+}
+
+input[type="submit"]:hover,
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para el cuadro de búsqueda */
+#searchTerm {
+  width: 60%;
+}
+
+#searchButton {
+  margin-left: 10px;
+}
+
+/* Estilo general para el contenedor de las cartas */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Estilo para cada carta */
+.card {
+  width: 400px;
+  height: 600px; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 15px; 
+  background-color: #f9f9f9; 
+}
+/* Estilos específicos para los elementos dentro de cada carta */
+.card table {
+  width: 100%;
+}
+
+.card .cardType {
+  font-weight: bold;
+}
+
+.card .cardName {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.card .cardDescription {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.card .battlePoints {
+  font-weight: bold;
+}
+
+.card .editButton,
+.card .deleteButton {
+  display: block;
+  margin-top: 5px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card .editButton:hover,
+.card .deleteButton:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para el formulario emergente */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+.popup h2 {
+  margin-top: 0;
+}
+
+.popup label,
+.popup input,
+.popup textarea {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.popup input,
+.popup textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.popup button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Estilos para la paginación */
+#pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#pagination button {
+  margin: 0 5px;
+}
+#monstruo {
+  background-image: url("assets/monster.jpg");
+  background-size: cover;
+}
+
+#magica {
+  background-image: url("assets/magic.jpg"); 
+  background-size: cover;
+}
+
+#trampa {
+  background-image: url("assets/trap.png"); 
+  background-size: cover;
+}
+
+
+tbody {
+  display: flex;
+  gap: 5px;
+}
